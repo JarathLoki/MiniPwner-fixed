@@ -1,0 +1,16 @@
+config wifi-device  radio0
+	option type     	mac80211
+	option channel  	11
+	option hwmode		11g
+	option path		'platform/ar933x_wmac'
+	option htmode		HT20
+	option disabled 	0   # 0=wifi enabled, 1=wifi disabled
+
+# AP mode
+config wifi-iface
+	option device   	radio0
+	option network  	wan
+	option mode     	ap
+	option ssid     	"MiniPwner-Setup"
+	option encryption 	psk2
+	option key		"M!n!Pwn3r$etup"
